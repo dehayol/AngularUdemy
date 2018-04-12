@@ -1,0 +1,8 @@
+<input [(ngModel)]="username"
+  (keyup)="onNameChange()">
+
+<p>User Name is: {{username}}</p>
+
+<button class="btn btn-default"
+        [disabled]="buttonDisabled"
+  (click)="onSubmit()">Submit</button>

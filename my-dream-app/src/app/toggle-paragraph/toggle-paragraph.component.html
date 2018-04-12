@@ -1,0 +1,15 @@
+<h3>Paragraph toggler</h3>
+<button class="btn btn-primary" (click)="onBtnClick()">{{btnText}}</button>
+<p *ngIf="displayParagraph">
+  toggle-paragraph works!
+</p>
+<hr>
+<h4>Log</h4>
+<div class="container">
+  <div class="row" *ngFor="let row of rows; index as i;"
+       [ngClass]="{whiteText : i>=4}"
+       [ngStyle]="{backgroundColor: i>=4? 'blue':'white'}"  >
+    <div class="col-sm-6">{{row.ts}}</div>
+    <div class="col-sm-6">{{row.status}}</div>
+  </div>
+</div>
